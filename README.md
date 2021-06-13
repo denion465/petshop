@@ -1,6 +1,7 @@
 # Iniciando /backend
 
 ##### TODOS COMANDO FORAM EXECUTADOS NA PASTA: ~/petshop/backend
+##### Projeto feito com Java 11 
 
 ## POSTGRES
 
