@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres?createDataBaseIfNotExists=true
+    url: jdbc:postgresql://localhost:5432/PetShop?createDatabaseIfNotExist=true
     username: postgres
     password: docker
 

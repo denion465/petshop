@@ -1,15 +1,18 @@
 package backend.petshop.model;
 
+import java.util.Set;
+
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
-@Table(name = "tb_produto")
 @Getter
 @Setter
+@Entity
+@Table(name = "tb_produto")
 public class Produto {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +26,14 @@ public class Produto {
 
   @NotNull
   private Double preco;
+
+  @Valid
+  @ManyToMany
+  @JoinTable(
+    name = "rel_categoria_produto",
+    joinColumns = @JoinColumn(name = "id_produto", referencedColumnName = "id"),
+    inverseJoinColumns = @JoinColumn(name = "id_categorias", referencedColumnName = "id")
+  )
+  private Set<Categorias> categorias;
+
 }

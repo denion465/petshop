@@ -2,7 +2,6 @@ package backend.petshop.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
@@ -21,7 +20,7 @@ public class ProdutoService {
     return this.produtoRepository.findAll();
   }
 
-  public Set<Produto> findByName(String nome) {
+  public List<Produto> findByName(String nome) {
 
     return this.produtoRepository.findByNome(nome);
   }
